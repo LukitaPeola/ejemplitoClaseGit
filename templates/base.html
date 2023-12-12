@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INFORMATORIO</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+</head>
+<body>
+	<h1 class="titulo">MENU</h1>
+	<img src="{% static 'img/logo2.gif' %}" width="1200px">
+	<ul>
+		<li><a href="{% url 'inicio' %}">Home</a></li>
+		<li><a href="{% url 'contacto' %}">Contacto</a>
+		</li>
+		<li><a href="{% url 'noticias:h_noticias' %}">NOTICIAS</a></li>
+	</ul>
+
+	{% block contenido %}
+
+	{% endblock contenido %}
+
+</body>
+</html>
